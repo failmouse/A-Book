@@ -1,0 +1,28 @@
+image: node:14.16.1
+pipelines:
+  branches:
+    master:
+      - step:
+          size: 2x
+          name: Build and push
+          services:
+            - docker
+          caches:
+            - docker
+            - node
+          script:
+            - apt-get update
+            - apt-get install -y jq
+            - declare -x VERSION=$(jq -r '.version' package.json)
+            - echo $VERSION
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD registry.sobix.io
+            - docker build -t "registry.sobix.io/$BITBUCKET_REPO_SLUG/sobix-linux:$VERSION" .
+            - git tag $VERSION
+            - git remote -v
+            - git push origin --tags
+            - docker push "registry.sobix.io/$BITBUCKET_REPO_SLUG/sobix-linux:$VERSION"
+
+definitions:
+  services:
+    docker:
+      memory: 6144

@@ -1,0 +1,21 @@
+.trade{
+    &__block_box{
+        padding: 50px 0px;
+        justify-content: center;
+        text-align: center;
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 114px;
+            height: 68px;
+            &__view{
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import '../../assets/variables.scss';
+
+.selector {
+    position: relative;
+
+    &__btn {
+        border: 1px solid rgba(18, 30, 42, .08);
+        font-size: 16px;
+        line-height: 1;
+        overflow: hidden;
+        padding: 18px 48px 18px 24px;
+        position: relative;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+
+        img {
+            margin: -3px 23px 0 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: rotate(180deg);
+            transition: all .3s;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 18px 24px;
+        width: 100%;
+        background: #fff;
+        border: 1px solid rgba(18, 30, 42, .08);
+        position: absolute;
+        inset: 0px auto auto 0px;
+        transform: translate3d(0px, 58px, 0px);
+        box-shadow: 0 25px 50px rgb(28 48 68 / 15%);
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__item {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px 0 0;
+        transition: font-weight .3s;
+
+        &--selected {
+            font-weight: 600;
+
+            .selector__icon {
+                background-color: $prime;
+                border-color: $prime;
+            }
+        }
+    }
+
+    &__icon {
+        border: 1px solid rgba(18, 30, 42, .3);
+        border-radius: 50%;
+        display: inline-block;
+        height: 10px;
+        margin: 6px 5px 0 0;
+        transition: background-color .3s, border-color .3s;
+        vertical-align: top;
+        width: 10px;
+    }
+
+    &--open {
+        .selector {
+            &__list {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            &__btn {
+                img {
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+}

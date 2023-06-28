@@ -1,0 +1,151 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.post {
+    min-height: 50vh;
+    position: relative;
+
+    h1 {
+        color: #121e2a;
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0 0 15px;
+    }
+
+    p {
+        color: #121e2a;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__date {
+        color: #121e2a;
+        font-size: 16px;
+    }
+
+    &__content {
+        margin: 15px 0 0;
+
+        img {
+            max-width: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+
+    &__footer {
+        background: #f3f3f4;
+        padding: 24px 24px 9px;
+
+        @media (max-width: 767px) {
+            padding: 24px 0px 9px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 18px;
+            @media (max-width: 767px) {
+                margin: 0 12px 18px;
+            }
+        }
+    }
+
+    &__btn {
+        display: inline-block !important;
+        margin: 0 15px 15px 0;
+        border: 2px solid transparent;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        text-decoration: none;
+        @include btn;
+        padding: 16px 16px;
+        // @media (min-width: 0px) {
+        //     width: 30%;
+        // }
+
+        &--demo {
+            border-color: rgba(18, 30, 42, .3);
+            color: $black;
+
+            &:hover {
+                border-color: $black;
+                color: $black;
+            }
+        }
+
+        &--real {
+            background: $prime;
+            border-color: $prime;
+            color: #fff;
+
+            &:hover {
+                background: $prime-light;
+                border-color: $prime-light;
+                color: #fff;
+            }
+        }
+    }
+
+    &__news {
+        background: #fff;
+        box-shadow: 0 30px 50px rgb(0 20 174 / 7%);
+        padding: 25px;
+
+        h2 {
+            color: #121e2a;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0 0 20px;
+        }
+
+        h3 {
+            color: #121e2a;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+        p {
+            color: #121e2a;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 18px;
+            margin: 0 0 15px;
+            max-height: 36px;
+            overflow: hidden;
+        }
+
+        .date {
+            color: #121e2a;
+            font-size: 16px;
+            margin: 0 0 15px;
+        }
+
+        .single {
+            display: block;
+            padding: 0 0 0 68px;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .time {
+            color: rgba(18, 30, 42, .4);
+            font-size: 16px;
+            left: 0;
+            line-height: 1.2;
+            position: absolute;
+            top: 0;
+        }
+
+        .more {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

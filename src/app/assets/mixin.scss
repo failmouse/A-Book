@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+@mixin bannerTitle{
+    font-size: 48px !important;
+    font-weight: 600 !important;
+    // margin: 0 0 40px !important;
+    @media (max-width:770px) {
+        font-size: 42px !important;
+    }
+}
+@mixin subTitle{
+    font-size: 36px !important;
+    font-weight: 600 !important;
+}
+@mixin text{
+    font-size: 16px !important;
+    line-height: 29px !important;
+    font-weight: 300 !important;
+    color: #4f4f4f;
+}
+
+@mixin btn{
+    font-size: 16px;
+    line-height: 1;
+    // padding: 16px 60px;
+    border: 1px solid $black;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $black;
+    // display: block;
+}
+@mixin btn_shadow{
+    box-shadow: 0 3px 4px rgb(221 226 235 / 50%), 0 7px 24px rgb(0 20 174 / 5%);
+}
+
+@mixin btn_stroke {
+    box-shadow: 0 3px 4px rgb(221 226 235 / 50%), 0 7px 24px rgb(0 20 174 / 5%);
+    font-size: 16px;
+    line-height: 1;
+    // padding: 16px 60px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+@mixin btn_fill {
+    box-shadow: 0 3px 4px rgb(221 226 235 / 50%), 0 7px 24px rgb(0 20 174 / 5%);
+    color: $prime;
+    font-size: 16px;
+    line-height: 1;
+    // padding: 16px 60px;
+    border: 2px solid $prime;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+}

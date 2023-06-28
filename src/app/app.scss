@@ -1,0 +1,142 @@
+@import url(./assets/bootstrap.css);
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './assets/variables.scss';
+@import './assets/mixin.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("ttf");
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    @media (max-width: 1024px) {
+        overflow-x: hidden;
+    }
+
+    margin: unset;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    @include text;
+
+}
+
+.main {
+    @media (max-width: 767px) {
+        margin: 66px 0 40px 0;
+    }
+
+    @media (min-width: 767px) {
+        margin: 95px 0 40px 0;
+
+    }
+}
+
+[class^=col-] {
+    position: relative;
+}
+
+.sf-btn {
+    background: $prime;
+    color: #fff !important;
+    border-color: $prime !important;
+    @include btn;
+    
+    &:hover {
+        background: $prime;
+    }
+}
+
+.preloader {
+    background-image: url(./assets/preloader.svg);
+    position: absolute;
+    background-size: 200px 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-color: white;
+}
+
+.preswipeloader {
+    width: 100%;
+    height: 500px;
+    background-image: url(./assets/preloader.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: center;
+    // background-color: white;
+}
+
+.main {
+    min-height: 50vh;
+    width: 100%;
+}
+
+
+.indent{
+    &__title{
+        padding-top: 70px;
+        margin-bottom: 60px;
+    }
+    &__title_auxilary{
+        margin-bottom: 60px; 
+    }
+    &__title_small{
+        margin-bottom: 30px;
+    }
+    &__btn{
+        margin-top: 60px;
+    }
+    &__btn_auxilary{
+        margin-bottom: 60px;  
+    }
+    &__list{
+        margin-bottom: 60px;
+    }
+    &__svg_icon{
+        margin-bottom: 50px;
+        // margin-top: 50px;
+    }
+    &__text{
+        margin: 50px 0 ;
+    }
+    &__mobile{
+        @media (max-width: 767px) {
+            margin: 60px 0;
+        }
+    }
+}
+
+
+.sm-btn{
+    padding: 16px 20px;
+    display: block;
+    width: 90px;
+    &--header{
+        padding: 8px 20px;
+    }
+}
+.md-btn{
+    padding: 16px 20px;
+    display: block;
+    width: 155px;
+    &--header{
+        padding: 8px 20px;
+    }
+}
+.lg-btn{
+    padding: 16px 20px;
+    display: block;
+    width: 335px;
+    &--header{
+        padding: 8px 20px;
+    }
+}

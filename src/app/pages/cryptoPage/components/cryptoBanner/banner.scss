@@ -1,0 +1,193 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.crypto_banner{
+  overflow-x: hidden;
+  .banner_mobile_btn{
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .btn{
+    @include btn;
+    
+    &--create{
+      background-color: $prime;
+      border-color: $prime;
+      color: #fff;
+      &:hover{
+        background-color: $prime-light;
+        color: #fff;
+        }
+      }
+    }
+  h1{
+   @include bannerTitle;
+  }
+  .desk_ul{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 35px;
+   @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+   }
+    li{
+      float: left;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 0 50px 15px 35px;
+      position: relative;
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &::before{
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
+        content: url('./assets/check.svg');
+        height: 28px;
+        left: 0;
+        line-height: 28px;
+        position: absolute;
+        text-align: center;
+        width: 28px;
+      }
+    }
+  }
+  .images{
+   background: url('./assets/Crypto.png');
+   background-size: 696px 504px;
+   height: 504px;
+   width: 696px;
+  }
+  .banner_mobile{
+    h1{
+      font-size: 36px;
+      margin: 0 0 20px;
+      text-align: center;
+      @media (max-width: 770px) {
+        text-align: left;
+    }
+    }
+    p{
+      margin-bottom: 67px;
+      color: $black;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 300;
+      @media (max-width: 770px) {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    }
+    .mobile{
+      border-radius: 0 0 6px 6px;
+      overflow: hidden;
+      padding: 34px 0 0;
+      position: relative;
+      img{
+        position: absolute;
+        right: -43px;
+        top: 0;
+        width: 200px;
+        @media (max-width: 376px) {
+          display: none;
+        }
+      }
+    }
+    .mobile_app{
+      background-image: linear-gradient(90deg,#191920 0,#0a0a0d);
+      border-radius: 6px;
+      padding: 32px 152px 32px 24px;
+      position: relative;
+      text-align: initial;
+      @media (max-width: 376px) {
+        padding: 32px 24px;
+      }
+      h2{
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 0 0 12px;
+      }
+      p{
+        color: hsla(0,0%,100%,.6);
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0 0 22px;
+        text-align: start;
+      }
+      .btn{
+       @include btn;
+       padding: 16px 20px;
+        &--download{
+          background-color: $prime;
+          border-color: $prime;
+          color: #fff;
+        }
+        &--more{
+          margin-top: 10px;
+          color: #fff;
+        }
+      }
+    }
+    .crypto_interest{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px 0 0px;
+      padding: 0;
+        li{
+          flex-grow: 1;
+          font-size: 26px;
+          font-weight: 600;
+          line-height: 28px;
+          margin-bottom: 22px;
+          padding: 25px 10px;
+          text-align: center;
+          small{
+            color: rgba(18,30,42,.6);
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+        li:first-child{
+          border: solid #e7e7e8;
+          border-width: 0 1px 0 0;
+        }
+    }
+    .crypto_benefits{
+      margin: 60px 0;
+      &__item{
+        margin: 0 0 60px;
+        padding: 0 0 0 70px;
+        position: relative;
+        h2{
+          font-size: 28px;
+          font-weight: 600;
+        }
+        p{
+          color: rgba(18,30,42,.6);
+          font-size: 16px;
+          font-weight: 300;
+          text-align: start;
+        }
+        img{
+          left: 10px;
+          position: absolute;
+          top: 0;
+        }
+        .customsvg{
+          left: 4px;
+        }
+      }
+      
+    }
+    @media (min-width: 770px) {
+      display: none;
+    }
+  }
+}

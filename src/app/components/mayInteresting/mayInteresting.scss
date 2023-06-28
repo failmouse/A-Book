@@ -1,0 +1,10 @@
+@import '../../assets/mixin.scss';
+@import '../../assets/variables.scss';
+
+.mayInteresting{
+    .title{
+        @include subTitle;
+        margin-bottom: 100px;
+    }
+}
+

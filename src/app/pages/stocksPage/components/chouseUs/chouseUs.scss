@@ -1,0 +1,79 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.stocks_chouseUs{
+    // margin-top: 150px;
+    padding: 175px 0 140px;
+    // margin-bottom: 50px;
+    overflow: hidden;
+    @media (max-width: 760px) {
+        margin-top: 50px; 
+        padding: 0px 0 50px;
+
+    }
+    .row{
+        @media (min-width: 760px) {
+            flex-wrap: nowrap;
+        }
+    }
+    .desk_img{
+        @media (min-width: 760px) {
+            position: absolute;
+            right: -250px;
+            top: -210px;
+            width: 600px;
+        }
+        @media (max-width: 759px) {
+            width: 400px;
+        }
+    }
+    .desk_view{
+        font-weight: 300;
+        // margin-top: 35px;
+        position: relative;
+        text-align: left;
+    }
+    &__btn{
+        justify-content: center;
+        margin: 12px 10px 0 0;
+        text-align: center;
+        text-decoration: none;
+        @include btn;
+        &--download{
+          background-color: $prime;
+          border-color: $prime;
+          border-radius: 3px;
+          color: #fff;
+          &:hover{
+            background-color: $prime-light;
+            color: #fff;
+            }
+          }
+        &--find{
+            box-shadow: 0 7px 14px rgb(0 20 174 / 10%);
+            color: $prime;
+            border-color: $prime ;
+            &:hover{
+                background-color: $prime;
+                color: #fff;
+            }
+        }  
+        }
+    p{
+        color: rgba(18,30,42,.6);
+        font-size: 16px;
+        line-height: 29px;
+        // margin: 0 0 50px;
+        text-align: left;
+    }
+    h2{
+        // padding-bottom: 60px;
+        width: 66.66667%;
+        font-size: 36px;
+        font-weight: 600;
+        // margin: 0 0 20px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}

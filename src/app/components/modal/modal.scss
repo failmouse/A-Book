@@ -1,0 +1,46 @@
+.modal {
+    &__background {
+        animation: fadein-modalbg .2s;
+        background-color: #121E2A;
+        bottom: 0;
+        left: 0;
+        opacity: .4;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+    &__container {
+        max-width: 580px;
+        background: #fff;
+        left: 50%;
+        position: fixed;
+        top: 50%;
+        animation: transform-modal .2s;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+}
+
+
+@keyframes fadein-modalbg {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes transform-modal {
+    from {
+        transform: translate(-50%, -150%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}

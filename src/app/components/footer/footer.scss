@@ -1,0 +1,225 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixin.scss';
+
+.group{
+    margin-top: -35px;
+    @media (max-width: 770px) {
+    margin-top: 20px; 
+    display: flex;
+    justify-content: space-between;
+    }
+    @media (max-width: 520px) {
+    display: block;
+    }
+}
+.d-sm-none{
+    @media (max-width: 576px) {
+        display: none;
+    }
+}
+.footer-block {
+    margin-top: 70px;
+    background-color: #2a2e39;
+    overflow: initial;
+    position: relative;
+
+    .container {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .col-md-6 {
+        height: 340px;
+
+        @media (max-width: 767px) {
+            height: auto;
+        }
+    }
+
+    &__img {
+        text-align: right;
+
+        img {
+            max-width: 100%;
+            position: inherit;
+        }
+    }
+
+    &__text {
+        z-index: 1;
+
+        h2 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0 0 25px;
+            padding: 0;
+        }
+
+        p {
+            color: #95959a;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0 0 36px;
+        }
+
+        @media (max-width: 767px) {
+            text-align: left;
+            padding-top: 50px;
+            margin-bottom: 30px;
+            p {
+                font-size: 16px;
+                max-width: 350px;
+            }
+
+            h2 {
+                font-size: 30px;
+                margin: 0 0 18px;
+            }
+        }
+    }
+
+    &__btn {
+        text-align: center;
+        text-decoration: none;
+        @include btn;
+        background: $prime;
+        border-color: $prime;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: white;
+            background: $prime-light;
+            border-color: $prime-light;
+        }
+    }
+}
+
+.footer {
+    @media (min-width: 992px) {
+        padding: 58px 0;
+    }
+
+    // height: 220px;
+    background-color: #181c27;
+    color: hsla(0, 0%, 100%, .6);
+
+    p {
+        font-size: 13px;
+    }
+
+    .logo_auxiliary {
+        @media (max-width:1100px) {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        height: 100%;
+
+        @media (max-width: 1100px) {
+            padding: 0 20px;
+        }
+
+        .desk_ul {
+            padding: 0;
+            display: none;
+            flex-wrap: nowrap;
+
+            @media (max-width:624px) {
+                display: flex;
+                border: solid #747478;
+                border-width: 1px 0;
+                flex-wrap: wrap;
+                // margin-bottom: 35px;
+                text-align: center;
+                padding-bottom: 20px;
+                li {
+                    float: left;
+                    font-size: 16px;
+                    font-weight: 300;
+                    padding-top: 10px;
+                    position: relative;
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: 13px;
+        line-height: 1;
+        position: relative;
+        padding-left: 10px;
+        &__title{
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+        }
+        a {
+            display: flex;
+            color: rgba(255, 255, 255, 0.765);
+            text-decoration: none;
+            transition: color .3s ease;
+            margin: 10px 0 0 25px;
+            text-align: initial;
+
+            &:hover {
+                color: $prime;
+            }
+
+            @media (max-width:767px) {
+                margin-top: 10px;
+            }
+        }
+    }
+    .main_ul{
+        display: grid;
+        grid-template-columns: 245px 235px 170px 160px;
+        @media (max-width: 1100px) {
+        grid-template-columns: 2fr 2fr 1fr 2fr;
+        }
+        @media screen {
+            
+        }
+        @media (max-width: 623px) {
+            display: none;
+        }
+    }
+    .m-md-none {
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .risk {
+        font-size: 14px;
+        padding: 5px 20px;
+        line-height: 20px;
+    }
+    .android{
+        margin-bottom: 20px;
+    }
+    .download_group{
+        
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 20px;
+        }
+
+        &__btn{
+            width: 135px;
+            @media (min-width:767px) {
+            margin-bottom: 20px;        
+    }
+    }
+}
+}

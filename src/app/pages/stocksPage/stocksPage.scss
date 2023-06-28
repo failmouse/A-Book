@@ -1,0 +1,34 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixin.scss';
+
+.stock_page{
+  @media (min-width:1050px) {
+      display: flex;
+      justify-content: center;
+    }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    margin: 12px 10px 0 0;
+    text-align: center;
+    text-decoration: none;
+    @include btn;
+    @media (min-width:1050px) {
+      width: 30%;
+    }
+      &--create{
+      border-color: $prime;
+      color: $prime;
+      &:hover{
+          background-color: $prime-light;
+          color: #fff;
+          }
+      }
+  }
+}
+.whyus_sect{
+  padding-bottom: 30px;
+  @media (max-width: 768px) {
+    padding-bottom: 80px;
+  }
+}

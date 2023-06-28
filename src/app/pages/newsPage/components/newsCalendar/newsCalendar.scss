@@ -1,0 +1,161 @@
+@import '../../../../assets/variables.scss';
+
+.news {
+    &__calendar {
+        background: #fff;
+        box-shadow: 0 30px 50px rgb(0 20 174 / 7%);
+        margin: 0 0 36px;
+        position: sticky !important;
+        top: 75px;
+    }
+
+    &__calendar-title {
+        padding: 15px;
+
+        h3 {
+            color: #121e2a;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__calendar-header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        font-size: 14px;
+        color: #889399;
+        padding: 2px 0;
+        border-bottom: 1px solid rgba(18, 30, 42, .05);
+    }
+
+    &__calendar-content {
+        height: 400px;
+        overflow: auto;
+        position: relative;
+    }
+
+    &__calendar-header-col {
+        text-align: center;
+        padding: 4px 4px 4px 4px;
+    }
+
+    &__calendar-date {
+        color: #71787f;
+        font-size: 16px;
+        display: flex;
+        padding: 4px 4px 4px 4px;
+        padding-left: 14px;
+    }
+
+    &__calendar-day {
+        color: $black;
+        font-weight: 600;
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+
+    &__calendar-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        border-bottom: 1px solid rgba(18, 30, 42, .05);
+    }
+
+    &__calendar-col {
+        text-align: center;
+        padding: 4px 4px 4px 4px;
+        font-size: 16px;
+        color: $black;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--date {
+            img {
+                height: 15px;
+                width: 17px;
+            }
+        }
+
+        &--title {
+            align-items: flex-start;
+        }
+    }
+
+    &__calendar-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__calendar-btn {
+        padding: 16px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $prime ;
+    }
+
+    &__calendar-modal-header {
+        padding: 40px 45px 20px;
+        border: none;
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        position: relative;
+    }
+
+    &__calendar-modal-close {
+        background: url(./assets/close.png) no-repeat 0 0;
+        background-size: 14px 14px;
+        border: none;
+        display: block;
+        height: 18px;
+        left: 100%;
+        margin: 0 0 0 -33px;
+        outline: none;
+        position: absolute;
+        top: 15px;
+        width: 18px;
+    }
+
+    &__calendar-modal-content {
+        padding: 0 35px 35px;
+        text-align: center;
+
+        .login-link {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            margin: 35px 0;
+            padding: 10px 45px;
+            background: $prime;
+            color: #fff;
+            border: 2px solid $prime;
+            border-radius: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $prime-light;
+                background: $prime-light;
+            }
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+}

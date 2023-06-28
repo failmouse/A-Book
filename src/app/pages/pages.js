@@ -1,0 +1,15 @@
+export { default as Main } from "./mainPage/mainPage.jsx";
+export { default as Trading } from "./tradingPage/tradingPage.jsx";
+export { default as Stocks } from "./stocksPage/stocksPage.jsx";
+export { default as Post } from "./postPage/postPage.jsx";
+export { default as News } from "./newsPage/newsPage.jsx";
+export { default as Contacts } from "./contactPage/contactPage.jsx";
+export { default as Crypto } from "./cryptoPage/cryptoPage.jsx";
+export { default as Forex } from './forexPage/forexPage.jsx';
+export { default as Calendar } from './calendarPage/calendarPage.jsx';
+export { default as Assets } from './assetsPage/assetsPage.jsx';
+export { default as Download } from './downloadPage/downloadPage.jsx';
+export { default as Contract } from './contractPage/contractPage.jsx';
+export { default as Conditions } from './conditionsPage/conditionsPage.jsx';
+export { default as Commodities } from './commoditiesPage/commoditiesPage.jsx';
+export { default as Deposits } from './depositPage/depositPage.jsx';

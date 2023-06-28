@@ -1,0 +1,107 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.top_crypto{
+    margin-top: 60px;
+    .title{
+        text-decoration: none;
+        h2{
+            color: $black;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .arrow{
+            width: 8px;
+                height: 14px;
+                margin-left: 5px;
+                color: $prime;
+                transition: color 0.25s ease 0s, transform 0.3s ease 0s;
+        }
+        &:hover{
+            .arrow{
+                transform: translateX(3px) scale(0.9);
+                color: $prime-light;
+            }
+        }
+    }
+    .panel{
+        position: relative;
+        display: block;
+        // margin-right: 20px;
+        border-radius: 2px;
+        box-shadow: 0 0 16px 1px rgb(0 0 0 / 5%);
+        background: #fff;
+        color: #4a4a4a;
+        cursor: pointer;
+        transition: box-shadow .3s ease;
+        .names{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            padding: 12px;
+            background: #f1f1f1;
+            color: #9c9c9c;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .body{
+            margin: 0 0 15px;
+            div{
+                // padding: 3px;
+                font-size: 16px;
+                // padding-left: 12px;
+            }
+            .positive{
+                color: #35a947;
+              }
+              .negative{
+                color: #e34828;
+              }
+            .info{
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+            .price{
+                font-weight: 600;
+                flex-grow: 1;
+                flex-basis: 0;
+                text-align: right;
+                margin-right: 16%;
+            }
+            .changed{
+                font-weight: 600;
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+        }
+        .mobile_view{
+            @media (max-width: 767px) {
+                margin: 10px 0;
+            }
+        }
+        .btn-Crypto{
+            text-align: center;
+            text-decoration: none;
+            @include btn;
+            padding: 16px 45px !important;
+            &--create{
+              border-color: $prime;
+              color: $prime;
+              &:hover{
+              background-color: $prime;
+                color: #fff;
+                }
+            }
+        }
+    }
+    .center_mob{
+        padding: 20px 10px;
+        @media (max-width: 760px) {
+        text-align: center;
+        padding: 5px 10px;
+        }
+    }
+}

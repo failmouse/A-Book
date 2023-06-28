@@ -1,0 +1,60 @@
+@import '../../../../assets/variables.scss';
+
+.news-list {
+    position: relative;
+    min-height: 50vh;
+
+    &__row {
+        border-top: 1px solid rgba(18, 30, 42, .05);
+        position: relative;
+        transition: box-shadow .3s;
+        cursor: pointer;
+
+        &:first-child {
+            border: none;
+        }
+
+    }
+
+    &__single {
+        text-decoration: none;
+    }
+
+    &__content {
+        padding: 20px 15px 20px 90px;
+        position: relative;
+
+        &:hover {
+            background: #fff;
+            border-color: transparent;
+            box-shadow: 0 30px 50px rgb(0 20 174 / 7%);
+            z-index: 1;
+        }
+
+        h2 {
+            color: $black;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            margin: 0 0 5px;
+            padding: 0 45px 0 0;
+        }
+
+        p {
+            color: $black;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0;
+
+        }
+    }
+
+    &__time {
+        color: rgba(18, 30, 42, .4);
+        font-size: 16px;
+        left: 15px;
+        line-height: 18px;
+        position: absolute;
+        top: 20px;
+    }
+}

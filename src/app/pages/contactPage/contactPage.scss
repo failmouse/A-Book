@@ -1,0 +1,52 @@
+.contact_page{
+    font-size: 16px;
+    line-height: 1;
+    .box{
+        &__top{
+            background: url('./assets/map.png') no-repeat 100% 100%;
+            border-bottom: 1px solid rgba(18,30,42,.1);
+            min-height: 255px;
+            padding: 36px 36px 18px;
+            @media (max-width: 768px) {
+                padding: 36px 0px 18px;
+            }
+            h2{
+                font-size: 36px;
+                font-weight: 600;
+            }
+            .address{
+                color: rgba(18,30,42,.5);
+                margin-bottom: 30px;
+                max-width: 300px;
+            }
+        }
+        &__bot{
+            // min-height: 300px;
+            padding: 36px 36px 6px;
+            @media (max-width: 768px) {
+                padding: 36px 0px 6px;
+            }
+        }
+        .phone{
+            color: rgba(18,30,42,.5);
+            margin-bottom: 30px;
+        }
+        .email{
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+    .county_list{
+        color: rgba(18,30,42,.5);
+        display: block;
+        padding: 20px 25px 20px 61px;
+        position: relative;
+        transition: all .3s;
+        text-decoration: none;
+        &__active{
+            box-shadow: 0 24px 72px rgb(67 77 147 / 8%);
+            color: #121e2a;
+            font-weight: 600;
+        }
+    }
+}

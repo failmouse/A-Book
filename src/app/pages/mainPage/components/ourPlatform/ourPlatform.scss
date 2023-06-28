@@ -1,0 +1,53 @@
+@import '../../../../assets/variables.scss';
+
+.platforms {
+    &__header {
+        margin-bottom: 60px;
+        color: $black;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    &__content {
+        font-weight: 300;
+        margin-top: 35px;
+        min-height: 350px;
+        text-align: left;
+
+        img {
+            left: -50px;
+            position: absolute;
+            top: -50px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 35px 0 60px;
+            padding: 0;
+            width: 85%;
+
+            li {
+                color: $black;
+                font-size: 16px;
+                font-weight: 300;
+                padding: 0 0 15px 35px;
+                position: relative;
+                width: 100%;
+
+                &::before {
+                    background-color: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
+                    content: url(./assets/check.svg);
+                    height: 28px;
+                    left: 0;
+                    line-height: 28px;
+                    position: absolute;
+                    text-align: center;
+                    width: 28px;
+                }
+            }
+        }
+    }
+
+}

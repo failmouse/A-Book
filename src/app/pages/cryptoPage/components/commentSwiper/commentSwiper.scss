@@ -1,0 +1,153 @@
+.comment{
+    padding: 80px 0;
+    .swiper-body{
+        background-color: #f3f5f6;
+    }
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        /* Fix of Webkit flickering */
+        z-index: 1;
+      }
+      .swiper-vertical > .swiper-wrapper {
+        flex-direction: column;
+      }
+      .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+      }
+      .swiper-android .swiper-slide,
+      .swiper-wrapper {
+        transform: translate3d(0px, 0, 0);
+      }
+      .swiper-pointer-events {
+        touch-action: pan-y;
+        &.swiper-vertical {
+          touch-action: pan-x;
+        }
+      }
+      .swiper-slide {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: 100%;
+        height: 500px;
+        position: relative;
+        transition-property: transform;
+      }
+      .swiper-slide-invisible-blank {
+        visibility: hidden;
+      }
+      /* Auto Height */
+      .swiper-autoheight {
+        &,
+        .swiper-slide {
+          height: auto;
+        }
+      
+        .swiper-wrapper {
+          align-items: flex-start;
+          transition-property: transform, height;
+        }
+      }
+      .swiper-backface-hidden .swiper-slide {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    .card{
+        position: relative;
+        top: 20px;
+        width: 460px;
+        height: 300px;
+        margin: 0 20px 40px;
+        outline: none;
+        padding: 24px 32px;
+        background: #fff;
+        box-shadow: 0 0 2px 0 rgb(137 146 177 / 15%), 0 3px 10px 0 rgb(137 146 177 / 10%);
+        -webkit-box-shadow: 0 0 2px 0 rgb(137 146 177 / 15%), 0 3px 10px 0 rgb(137 146 177 / 10%);
+        -moz-box-shadow: 0 0 2px 0 rgba(137,146,177,.15),0 3px 10px 0 rgba(137,146,177,.1);
+        border-radius: 4px;
+        -webkit-transition: all .15s ease-out;
+        transition: all .15s ease-out;
+        &:hover{
+            z-index: 100;
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+            box-shadow: 0 1px 15px 0 rgb(137 146 177 / 15%), 0 10px 20px 0 rgb(137 146 177 / 15%);
+        }
+        .main_text{
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        .title{
+            h2{
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: -1.5px;
+            }
+        }
+        .person{
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            height: 50px;
+            outline: 0;
+        }
+        .stars{
+            padding-left: 5px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #777;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            i{
+            display: inline-block;
+            width: 22px;
+            height: 26px;
+            background: url(./assets/stars.png) no-repeat 2px 0;
+            background-size: 55px 17px;
+            }
+        }
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+    .swiper-button-next{
+        background: #554c4c;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: 0px;
+        background: rgba(0, 0, 0, 0.25);
+        background-repeat: no-repeat;
+        background-size: 33%;
+        width: 37px;
+        height: 111px;
+    }
+    .swiper-button-prev{
+        background: #554c4c;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.25);
+        background-repeat: no-repeat;
+        background-size: 33%;
+        width: 37px;
+        height: 111px;
+    }
+}

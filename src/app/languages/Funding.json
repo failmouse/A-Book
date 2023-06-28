@@ -1,0 +1,17 @@
+{
+    "DEPO_BTN_DEPOSIT":"Deposit",
+    "DEPO_BTN_WITHDRAWALS":"Withdrawals",
+    "DEPO_TABLE_HEADER_1_COLUMN_TITLE":"Payment System",
+    "DEPO_TABLE_HEADER_2_COLUMN_TITLE":"Method",
+    "DEPO_TABLE_HEADER_3_COLUMN_TITLE":"Accept currency",
+    "DEPO_TABLE_HEADER_4_COLUMN_TITLE":"Fees",
+    "DEPO_TABLE_HEADER_5_COLUMN_TITLE":"Minimum amount",
+    "DEPO_TABLE_HEADER_6_COLUMN_TITLE":"Maximum amount",
+    "DEPO_TABLE_HEADER_7_COLUMN_TITLE":"Processing time",
+    "DEPO_TABLE_NO_LIMIT":"no limit",
+    "DEPO_TABLE_6_TIMES_INST":"Instantaneous (after 6 network confirms)",
+    "DEPO_TABLE_20_TIMES_INST":"Instantaneous (after 20 network confirms)",
+    "DEPO_TABLE_INST":"Instantaneous",
+    "DEPO_TABLE_FEES_FREE":"Free",
+    "DEPO_TABLE_PROCEED":"Up to one working day"
+}

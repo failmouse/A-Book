@@ -1,0 +1,28 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixin.scss';
+
+.more-news {
+    &__btn {
+        background: $prime;
+        color: #fff !important;
+        @include btn;
+        cursor: pointer;
+        border: 2px solid $prime;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        // @media (min-width: 840px) {
+        //     width: 30%;
+        // }
+        &:hover {
+            color: #fff !important;
+            background: $prime;
+        }
+    }
+    &__title{
+        font-size: 48px;
+        font-weight: 600;
+    }
+}

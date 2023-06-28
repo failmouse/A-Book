@@ -1,0 +1,69 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.whyTrade{
+    text-align: center;
+    @media (max-width: 770px) {
+        text-align: left;
+    }
+    a{
+        text-decoration: none;
+        font-weight: 400;
+    }
+    h2{
+        color: #4a4a4a;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    h4{
+        font-size: 20px;
+        margin: 20px 0 40px;
+        font-weight: 300;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .cardbox{
+        justify-content: space-around;
+        text-align: center;
+    }
+    .card{
+        width: 350px;
+        margin: 10px;
+        position: relative;
+        box-shadow: 0 0 15px #e4e4e4;
+        padding: 30px 20px 30px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        h4{
+            font-weight: 600;
+        }
+    }
+    .text_box{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        margin: 12px 10px 0 0;
+        text-align: center;
+        text-decoration: none;
+        @include btn;
+        &--start{
+          background-color: $prime;
+          border-color: $prime;
+          border-radius: 3px;
+          color: #fff;
+          &:hover{
+            background-color: $prime-light;
+            color: #fff;
+            }
+        }
+    }
+}

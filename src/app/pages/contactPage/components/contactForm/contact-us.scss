@@ -1,0 +1,125 @@
+@import '../../../../assets/variables.scss';
+@import '../../../../assets/mixin.scss';
+
+.contactForm{
+    span{
+        color: red;
+        font-size: 16px;
+        text-align: center;
+    }
+    display: flex;
+    &__formTitle{
+        // margin-bottom: 13px;
+    }
+    &__text{
+        color: white;
+    }
+    &__social{
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: auto;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__socialLinks{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    &__submit{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .submitText{
+        color: #808191;
+        font-size: 16px;
+        line-height: 22px;
+        opacity: 0.2s all ease;
+        &--Success{
+            color: #01F7B5;
+        }
+    }
+    &__main{
+        width: 100%;
+        padding: 35px 0;
+            h2{
+                font-size: 36px;
+                font-weight: 600;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                    input, select, textarea{
+                        color: #B0B0BA;
+                        padding: 14px;
+                        padding-left: 48px;
+                        border: 1px solid #B0B0BA;
+                        border-radius: 8px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        resize: none;
+                        transition: 0.2s all ease;
+                        &:focus-visible{
+                            color: black;
+                            outline: $prime;
+                            outline-style: auto;
+                            outline-width: 1px;
+                        }
+                    }
+                    textarea{
+                        height: 120px;
+                    }
+            }
+            .formRow{
+                display: flex;
+                justify-content: space-between;
+                // align-items: center;
+                gap: 20px;
+            }
+            .formColumn{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                // gap: 10px;
+                position: relative;
+            }
+            .submitButton{
+                background-color: $prime;
+                color: white !important;
+                border: none !important;
+                display: flex;
+                align-items: center !important;
+                white-space: nowrap;
+                @include btn;
+                cursor: pointer;
+            }
+            .ruBtn{
+                display: flex;
+                justify-content: flex-end;
+            }
+    }
+    .fa{
+        position: absolute;
+        padding: 14px;
+        width: 54px;
+        &-email{
+            content: url(./assets/images/emailIco.svg);
+        }
+        &-name{
+            content: url(./assets/images/nameIco.svg);
+        }
+        &-type{
+            content: url(./assets/images/topicIcoi.svg);
+        }
+        &-message{
+            content: url(./assets/images/messageIco.svg);
+        }
+    }
+}
