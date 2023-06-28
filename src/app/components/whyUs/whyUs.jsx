@@ -10,6 +10,8 @@ import customers from './assets/customers.svg';
 import support from './assets/support.svg';
 import collapse from './assets/collapse-arrow.svg';
 
+import langTokens from '../../languages/en.json';   // for new implementation 
+
 const Box = (props) => {
     return (
         <div className="zoomBox">
@@ -44,7 +46,7 @@ const Accordion = (props) => {
 }
 
 const WhyUs = () => {
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);
 
 
     const arrBox = [

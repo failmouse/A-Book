@@ -7,12 +7,12 @@ import Logo from '../../assets/whiteLogo.svg';
 import { useSelector } from 'react-redux';
 import google from './assets/btn-google-play-high-res.png';
 import apple from './assets/btn-app-store.svg';
-
+import langTokens from '../../languages/en.json';   // for new implementation 
 
 
 
 const Footer = () => {
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);
     const selectedLang =  useSelector((state) => state.language.selected);
     const navLinks = [
         { inner: langTokens.HEAD_NAVLINK1, href: "/trading-platforms" },

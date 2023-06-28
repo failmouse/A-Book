@@ -15,11 +15,12 @@ import bnb_bg from './assets/bnb_bg.jpeg';
 import mask from './assets/mask.png';
 import Chart from "../../../../components/chart/chart";
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
 
 const Currency =() =>{
         getAssets();
         const assets = useSelector((state) => state.assets.data);
-        const langTokens = useSelector((state) => state.language.data);
+        // const langTokens = useSelector((state) => state.language.data);  // for new implementation
         let btc = "BTCUSD";
         let bnb = "BNBUSD";
         let ada = "ADAUSD";

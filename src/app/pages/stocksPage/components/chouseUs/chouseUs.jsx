@@ -2,12 +2,12 @@ import React from "react";
 import './chouseUs.scss';
 import { useSelector } from 'react-redux';
 
-
-
 import two_phone from './assets/two_phone.png'
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 const ChouseUs =() =>{
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
     return(
         <section className="stocks_chouseUs">
             <div className="container">

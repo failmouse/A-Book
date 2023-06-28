@@ -3,9 +3,11 @@ import { useSelector } from 'react-redux';
 import './cryptoTrade.scss';
 import trader from './assets/copy_trader.png'
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
 
 const Trade =() =>{
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
+    
     return(
         <section className="neverTrade container">
             <div className="row">

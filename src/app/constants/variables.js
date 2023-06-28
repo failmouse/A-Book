@@ -1,4 +1,5 @@
-export const tradingLink = "https://trade.stocksfinex.com/en/sign-up"
+// export const tradingLink = "https://trade.stocksfinex.com/en/sign-up"    // old implementation
+export const tradingLink = "https://trade.a-bookbroker.com/en/sign-in"      // new implementation
 export const loginLink = "https://trade.stocksfinex.com/en/sign-in"
 // export const navLinks = [
 //     { inner: langTokens.HEAD_NAVLINK1, href: "/trading-platforms" },

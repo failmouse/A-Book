@@ -20,9 +20,12 @@ import appl from './assets/btns/btn-app-store.svg';
 import direct from './assets/btns/apk-download-badge.webp';
 import android from './assets/btns/btn-google-play-high-res.png'; 
 
+import langTokens from '../../languages/en.json';   // for new implementation 
+
 
 const Trading =() => {
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);
+    const appStorePath = 'https://apps.apple.com/de/app/pro-trading-app/id6447182562';
 
     return(
         <>
@@ -91,14 +94,14 @@ const Trading =() => {
                             {/* </div> */}
                             <div className="row">
                                 <div className="col-6 col-md-4 trading__platform__mobile__centered">
-                                    <img src={appl} alt='' className="trading__download-btn" width={"150px"} height={"50px"}/>
+                                    <a href={appStorePath} target="_blanc"><img src={appl} alt='' className="trading__download-btn" width={"150px"} height={"50px"}/></a>
                                 </div>
-                                <div className="col-6 col-md-4 trading__platform__mobile__centered">
+                                {/* <div className="col-6 col-md-4 trading__platform__mobile__centered">
                                     <img src={android} alt='' className="trading__download-btn" width={"150px"} height={"50px"}/>
                                 </div>
                                 <div className="trading__mobile-center col-md-4 trading__platform__mobile__centered">
                                     <a href={process.env.PUBLIC_URL + `/assets/documents/stocksfinex.apk`}><img src={direct} alt='' className="trading__download-btn" width={"150px"} height={"50px"}/></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

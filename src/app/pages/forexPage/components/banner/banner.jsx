@@ -9,8 +9,10 @@ import secure from './assets/secure.svg'
 import support from './assets/24-7-support.svg'
 import onePhone from './assets/one_phone.png'
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 const Banner =() =>{
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
     return <section className='forex_banner'>
         <div className='container'>
             <div className='row banner_desk'>
@@ -21,8 +23,8 @@ const Banner =() =>{
                         <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_2}</li>
                         <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_3}</li>
                         <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_4}</li>
-                        <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_5}</li>
-                        <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_6}</li>
+                        {/* <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_5}</li>
+                        <li>{langTokens.FOREX_BANNER_LIST_ELEMENT_6}</li> */}
                     </ul>
                     <div className='indent__btn  banner_mobile_btn'>
                         <a className='btn btn--create md-btn' href="https://trade.stocksfinex.com/en/sign-up">{langTokens.BTN_CREATE_ACCOUNT}</a>

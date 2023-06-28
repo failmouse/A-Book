@@ -8,7 +8,7 @@ import { selectLanguage, changeLanguage } from '../../core/languageSlice.js';
 import en from '../../languages/en.json';
 import { languageRequest } from '../../actions/general';
 import Cookies from 'universal-cookie';
-import Logo from '../../assets/darkLogo.svg';
+import Logo from '../../assets/logo-a-book.svg';
 import engIco from './assets/eng.svg';
 import rusIco from './assets/rus.svg';
 import useWidth from '../../hooks/screenWidth';
@@ -207,7 +207,7 @@ const Header = () => {
             <div className="header__wrapper">
                 <div className="container d-flex justify-content-between align-items-center">
                     <a className="d-inline-block" href="/">
-                        <img src={Logo} alt="StocksFinex" width="180px" height="44px" className="header__logo" />
+                        <img src={Logo} alt="A-Book" width="180px" height="44px" className="header__logo" />
                     </a>
                     <div className="d-none d-xl-flex header__open-account" style={{marginRight: '-110px'}}>
                         <Markets />

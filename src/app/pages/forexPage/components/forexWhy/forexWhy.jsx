@@ -8,8 +8,10 @@ import choose from './assets/coin.svg';
 import exchange from './assets/exchange.svg';
 import variety from './assets/lok.svg';
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 const WhyTrade = () => {
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
     return (
         <section className="whyTrade container">
             <h2 className="indent__title">{langTokens.FOREX_WHY_TITTLE}</h2>

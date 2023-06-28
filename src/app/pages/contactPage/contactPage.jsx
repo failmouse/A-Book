@@ -54,7 +54,7 @@ const Contacts = () =>{
     const[indx] =useState(1);
  
     let contacs= [
-        {country: "Saint-Vincent and the Grenadines", acc_opening: "", office: "",business: "", marketing: "", support: "", address: "Suite 305, Griffith Corporate Centre, St. Vincent and the Grenadines", mail:"support@stocksfinex.com", googlelink:"https://g.page/griffith-corporate-centre?share" , img: "", code: 1},
+        {country: "Saint-Vincent and the Grenadines", acc_opening: "", office: "",business: "", marketing: "", support: "", address: "A-Book Broker LLP. 71 Timiryazev Street Office 17. Almaty 050060. KZ", mail:"info@a-bookbroker.com", googlelink:"https://g.page/griffith-corporate-centre?share" , img: "", code: 1},
     ]
 
     return(

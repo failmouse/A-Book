@@ -6,8 +6,10 @@ import practice from './assets/blockchain-coins.svg'
 
 import './startTrading.scss'
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 const Trading =() =>{
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
     let card =[
         {img: real, alt: langTokens.CRYPTO_START_TRADING_CARD_REAL_ALT , label: langTokens.CRYPTO_START_TRADING_CARD_REAL_LABEL, text: langTokens.CRYPTO_START_TRADING_CARD_TEXT},
         {img: customised, alt: langTokens.CRYPTO_START_TRADING_CARD_CUSTOMISED_ALT, label: langTokens.CRYPTO_START_TRADING_CARD_CUSTOMISED_LABEL, text: langTokens.CRYPTO_START_TRADING_CARD_CUSTOMISED_TEXT},

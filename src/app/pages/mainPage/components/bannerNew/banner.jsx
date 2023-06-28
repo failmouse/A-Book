@@ -6,7 +6,7 @@ import { tradingLink, loginLink } from '../../../../constants/variables';
 import { useSelector } from "react-redux";
 import { getAssets } from '../../../../actions/actions';
 import { getTicks } from '../../../../actions/general';
-
+import langTokens from '../../../../languages/en.json';   // for new implementation 
 
 const ImageRequest = "https://static.alfatrading.io/static/images/icon/";
 
@@ -75,7 +75,7 @@ const rowItems = [
 ]
 
 const TableRows = (props) => {
-  const langTokens = useSelector((state) => state.language.data);
+  // const langTokens = useSelector((state) => state.language.data);  // for old implementation
   const [dayChange, setDayChange] = useState([]);
   getAssets();
   const assets = useSelector((state) => state.assets.data);
@@ -143,7 +143,7 @@ const TableRows = (props) => {
 }
 
 const Banner = () => {
-  const langTokens = useSelector((state) => state.language.data);
+  // const langTokens = useSelector((state) => state.language.data);  // old implementation
   const [selected, setSelected] = useState(rowItems[0]);
   const [counter, setCounter] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -188,14 +188,14 @@ const Banner = () => {
         <div className="container">
           <div className="banner__text col-lg-5">
             <div className="banner__title indent__title_auxilary">
-              {langTokens.MAIN_NEW_BANNER_TITTLE}
+              {langTokens.MAIN_BANNER_TITTLE}
             </div>
             <div className="banner__subTitle indent__text">
-              {langTokens.MAIN_NEW_BANNER_SUB_TITTLE}
+              {langTokens.MAIN_BANNER_SUB_TITTLE}
             </div>
             <div className="banner__btns">
               <a href={tradingLink} className="banner__btn banner__btn--real md-btn">
-                {langTokens.MAIN_NEW_BANNER_REGISTER}
+                {langTokens.MAIN_BANNER_REGISTER}
               </a>
               {/* <a href={loginLink} className="banner__btn banner__btn--demo">
                                 {langTokens.MAIN_NEW_BANNER_LOGIN}

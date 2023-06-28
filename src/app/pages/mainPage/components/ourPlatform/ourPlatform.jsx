@@ -3,9 +3,11 @@ import './ourPlatform.scss';
 import Laptop from './assets/laptop.webp';
 import { useSelector } from 'react-redux';
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 
 const OurPlatfrom = () => {
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
 
     return (
         <section className='platforms'>

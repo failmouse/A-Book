@@ -2,15 +2,16 @@ import React from 'react';
 import './banner.scss';
 import { useSelector } from 'react-redux';
 
-
 import speed from './assets/speed.svg'
 import choice from './assets/choice.svg'
 import secure from './assets/secure.svg'
 import support from './assets/24-7-support.svg'
 import onePhone from './assets/one_phone.png'
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
+
 const Banner =() =>{
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
 
     return <section className='crypto_banner'>
         <div className='container'>
@@ -22,8 +23,8 @@ const Banner =() =>{
                         <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_2}</li>
                         <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_3}</li>
                         <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_4}</li>
-                        <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_5}</li>
-                        <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_6}</li>
+                        {/* <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_5}</li>
+                        <li>{langTokens.CRYPTO_BANNER_TITTLE_ELEMNT_6}</li> */}
                     </ul>
                     <div className='indent__btn  banner_mobile_btn'>
                         <a className='btn btn--create md-btn' href='https://trade.stocksfinex.com/en/sign-up'>{langTokens.BTN_CREATE_ACCOUNT}</a>

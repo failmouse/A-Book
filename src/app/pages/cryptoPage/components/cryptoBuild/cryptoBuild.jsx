@@ -10,6 +10,7 @@ import ada_lg from './assets/cardano-ada-logo.svg';
 import eth_lg from './assets/ethereum.svg';
 import btc_lg from './assets/btc.svg';
 
+import langTokens from '../../../../languages/en.json';   // for new implementation 
 
 const Build= () =>{
     getAssets();
@@ -18,7 +19,7 @@ const Build= () =>{
     let ada = "ADAUSD";
     let eth = "ETHUSD";
     const assets = useSelector((state) => state.assets.data);
-    const langTokens = useSelector((state) => state.language.data);
+    // const langTokens = useSelector((state) => state.language.data);  // for old implementation
 
     if (!assets) {return null;}
     const crypto=[
@@ -94,7 +95,7 @@ const Build= () =>{
                             <li>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_1} <b>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_1_HREF}</b></li>
                             <li>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_2}</li>
                             <li>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_3}</li>
-                            <li><b>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_4}</b> – {langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_4_HREF}</li>
+                            {/* <li><b>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_4}</b> – {langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_4_HREF}</li> */}
                         </ul>
                         <a className="btn btn--create indent__btn md-btn" href={tradingLink}>{langTokens.BTN_CREATE_ACCOUNT}</a>
 
