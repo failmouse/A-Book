@@ -1,7 +1,7 @@
 @import '../../../../assets/mixin.scss';
 @import '../../../../assets/variables.scss';
 
-.depo_Withd{
+.depo_Withd {
     &__items {
         display: flex;
         align-items: center;
@@ -33,7 +33,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #ff5722;
+            background-color: #4572C4;
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -48,21 +48,27 @@
             color: #ff5622d3;
         }
     }
-    &__tableBox{
+
+    &__tableBox {
         padding: 20px 0 100px;
+
         @media (max-width: 768px) {
             overflow: scroll;
         }
     }
-    .depo_Table{
+
+    .depo_Table {
         text-align: center;
         box-shadow: 1px 1px 10px rgb(221 221 221 / 60%);
         width: 100%;
         max-width: 100%;
-        &__head{
+
+        &__head {
             border: 0 solid;
             border-color: inherit;
-            tr, th{
+
+            tr,
+            th {
                 background-color: #f4f6f5;
                 vertical-align: middle;
                 font-weight: bold;
@@ -71,31 +77,41 @@
                 border-top: 1px solid #c6c6c6;
                 border-bottom: 1px solid #c6c6c6;
             }
-            tr, th:first-child{
+
+            tr,
+            th:first-child {
                 border-left: 0px;
             }
         }
-        &__body{
-            &__td{
+
+        &__body {
+            &__td {
                 border-left: 1px solid #c6c6c6;
             }
-            tr, td {
+
+            tr,
+            td {
                 vertical-align: middle;
                 padding: 10px 20px;
                 border-top: 1px solid #c6c6c6;
                 border-bottom: 1px solid #c6c6c6;
-                }
+            }
         }
-        tr, td:nth-child(2){
+
+        tr,
+        td:nth-child(2) {
             width: 160px;
         }
-        tr, td:last-child{
+
+        tr,
+        td:last-child {
             max-width: 180px;
         }
-        &__first{
+
+        &__first {
             text-align: start;
         }
-        
+
     }
-        
+
 }

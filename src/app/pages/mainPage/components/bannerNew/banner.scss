@@ -3,8 +3,9 @@
 
 .banner {
     @media (max-width: 768px) {
-        margin-bottom: 50px ;
+        margin-bottom: 50px;
     }
+
     .d-sm-none {
         @media (max-width: 400px) {
             display: none;
@@ -557,6 +558,7 @@
                 padding: 17px 0px 14px;
                 margin: 0 10px;
             }
+
             @media (max-width: 375px) {
                 grid-template-columns: 110px 70px 70px 50px;
                 padding: 17px 0px 14px;

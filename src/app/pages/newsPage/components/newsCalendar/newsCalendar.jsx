@@ -24,7 +24,7 @@ const CalendarRows = (props) => {
             <div className="news__calendar-row">
                 <div className="news__calendar-col news__calendar-col--date">
                     <Moment format="HH:mm">{props.date}</Moment>
-                    <img alt={props.country} src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${props.country}.svg`} width="40px" height="30px"/>
+                    <img alt={props.country} src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${props.country}.svg`} width="40px" height="30px" />
                 </div>
                 <div className="news__calendar-col news__calendar-col--title">
                     <span>{props.title}</span>
@@ -105,7 +105,7 @@ const NewsCalendar = () => {
                     <div className="news__calendar-modal-content">
                         <p>{langTokens.NEWS_CALENDAR_MODAL_CONTENT}</p>
                         <a href={tradingLink} className="login-link" >{langTokens.NEWS_CALENDAR_MODAL_CONTENT_BTN_CREATE}</a>
-                        <p>{langTokens.NEWS_CALENDAR_MODAL_CONTENT_ALREDY} <a href='https://trade.stocksfinex.com/en/sign-in' target="_blank" rel="noreferrer">{langTokens.NEWS_CALENDAR_MODAL_CONTENT_BTN_LOGIN}</a></p>
+                        <p>{langTokens.NEWS_CALENDAR_MODAL_CONTENT_ALREDY} <a href='https://trade.a-book.com/en/sign-in' target="_blank" rel="noreferrer">{langTokens.NEWS_CALENDAR_MODAL_CONTENT_BTN_LOGIN}</a></p>
                         <p className="additional">&nbsp;</p>
                     </div>
                 </Modal>

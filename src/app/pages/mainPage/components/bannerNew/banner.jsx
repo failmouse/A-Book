@@ -160,12 +160,12 @@ const Banner = () => {
   if (assets && counter === 0) {
     let counter = 0;
     for (let i = 0; i < Object.values(assets.assets).length; i++) {
-        if ((Object.values(assets.assets)[i].groups.includes(selected.name) || Object.values(assets.assets)[i].groups.includes('Asia ' + selected.name))) {
-            ++counter;
-        }
+      if ((Object.values(assets.assets)[i].groups.includes(selected.name) || Object.values(assets.assets)[i].groups.includes('Asia ' + selected.name))) {
+        ++counter;
+      }
     }
     setCounter(counter);
-}
+  }
 
   const handleClick = () => {
     IcoElement.current.classList.add('banner__image--changing');

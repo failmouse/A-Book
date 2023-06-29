@@ -69,7 +69,7 @@ const ChangeLang = () => {
         width > 1200 ?
             <>
                 <div className="header__languages-selected" ref={menuBtn} onClick={handleClickOpen}>
-                    <img src={languages[index].img} alt="" width="5px" height="5px"/>
+                    <img src={languages[index].img} alt="" width="5px" height="5px" />
                     {languages[index].short}
                 </div>
                 <div className={`languages__menu${menuStatus ? " languages__menu--opened" : ''}`}>
@@ -78,7 +78,7 @@ const ChangeLang = () => {
                             return <li className='languages__link' key={index} onClick={() => {
                                 handleClickChange(index + 1);
                             }}>
-                                <img src={i.img} alt="" width="5px" height="5px"/>
+                                <img src={i.img} alt="" width="5px" height="5px" />
                                 {i.inner}
                             </li>
                         })}
@@ -91,7 +91,7 @@ const ChangeLang = () => {
                     return <li className='languages__link' key={index} onClick={() => {
                         handleClickChange(index + 1);
                     }}>
-                        <img src={i.img} alt="" width="5px" height="5px"/>
+                        <img src={i.img} alt="" width="5px" height="5px" />
                         {i.inner}
                     </li>
                 })}
@@ -186,7 +186,7 @@ const MarketAnalysis = () => {
 
 const Header = () => {
     const langTokens = useSelector((state) => state.language.data);
-    const selectedLang =  useSelector((state) => state.language.selected);
+    const selectedLang = useSelector((state) => state.language.selected);
     const navLinks = [
         { inner: langTokens.HEAD_NAVLINK1, href: "/trading-platforms" },
         // { inner: langTokens.HEAD_NAVLINK2, href: "/market-news" },
@@ -199,7 +199,7 @@ const Header = () => {
         { inner: langTokens.HEAD_NAVLINK3, href: "/cfd" },
         { inner: langTokens.HEAD_NAVLINK4, href: "/crypto" },
         { inner: langTokens.HEAD_NAVLINK5, href: "/forex" },
-        { inner: langTokens.HEAD_NAVLINK12, href: "/commodities"},
+        { inner: langTokens.HEAD_NAVLINK12, href: "/commodities" },
         { inner: langTokens.HEAD_NAVLINK6, href: "/contacts" }
     ]
     return (
@@ -209,12 +209,12 @@ const Header = () => {
                     <a className="d-inline-block" href="/">
                         <img src={Logo} alt="A-Book" width="180px" height="44px" className="header__logo" />
                     </a>
-                    <div className="d-none d-xl-flex header__open-account" style={{marginRight: '-110px'}}>
+                    <div className="d-none d-xl-flex header__open-account" style={{ marginRight: '-110px' }}>
                         <Markets />
                     </div>
                     <div className="d-none d-xl-inline-block ">
                         {navLinks.map((i, index) =>
-                            <div className="header__link" style={{marginRight: '-90px'}} key={index}><a href={i.href}>{i.inner}</a></div>
+                            <div className="header__link" style={{ marginRight: '-90px' }} key={index}><a href={i.href}>{i.inner}</a></div>
                         )}
                     </div>
                     <div className="d-flex d-xl-none align-items-center">
@@ -227,16 +227,16 @@ const Header = () => {
                                 <a href={tradingLink} className={`burger-header__btn burger-header__btn--real md-btn ${selectedLang === 'ru' ? "lg-btn burger-header__btn--rus" : ""}`}>{langTokens.BTN_CREATE_ACCOUNT}</a>
                             </div>
                             <div className='burger-header__btn__languages'>
-                            <ChangeLang />
+                                <ChangeLang />
                             </div>
                         </Burger>
                     </div>
-                    <div className="d-none d-xl-flex header__open-account" style={{marginRight: '-110px'}}>
+                    <div className="d-none d-xl-flex header__open-account" style={{ marginRight: '-110px' }}>
                         <MarketAnalysis />
                     </div>
-                    <div className="d-none d-xl-flex header__link" style={{marginRight: '-90px'}}><a href="/contacts">{langTokens.HEAD_NAVLINK6}</a></div>
+                    <div className="d-none d-xl-flex header__link" style={{ marginRight: '-90px' }}><a href="/contacts">{langTokens.HEAD_NAVLINK6}</a></div>
                     <div className="d-none d-xl-flex header__open-account">
-                        <ChangeLang />
+                        {/* <ChangeLang /> */}
                         <div className="header__btn header__btn--demo ">
                             <a href={loginLink} className="sm-btn sm-btn--header">
                                 <span>{langTokens.BTN_DEMO}</span>

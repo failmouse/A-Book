@@ -10,7 +10,7 @@ import onePhone from './assets/one_phone.png'
 
 import langTokens from '../../../../languages/en.json';   // for new implementation 
 
-const Banner =() =>{
+const Banner = () => {
     // const langTokens = useSelector((state) => state.language.data);  // for old implementation
     return <section className='commodities_banner'>
         <div className='container'>
@@ -26,7 +26,7 @@ const Banner =() =>{
                         <li>{langTokens.COMMODITIES_BANNER_LIST_ELEMENT_6}</li> */}
                     </ul>
                     <div className='indent__btn banner_mobile_btn'>
-                        <a className='btn btn--create md-btn' href="https://trade.stocksfinex.com/en/sign-up">{langTokens.BTN_CREATE_ACCOUNT}</a>
+                        <a className='btn btn--create md-btn' href="https://trade.a-book.com/en/sign-up">{langTokens.BTN_CREATE_ACCOUNT}</a>
                     </div>
                 </div>
                 <div className='col-md-5 col-lg-4 d-none d-md-block position-relative'>
@@ -36,25 +36,25 @@ const Banner =() =>{
             <div className='banner_mobile indent__btn'>
                 {/* <h1>{langTokens.COMMODITIES_BANNER_MOBILE_TITTLE}</h1>
                 <p>{langTokens.COMMODITIES_BANNER_MOBILE_SUB_TITTLE}</p> */}
-            <div className='mobile'>
-                <div className='mobile_app'>
-                    <div>
-                        <h2>{langTokens.COMMODITIES_BANNER_MOBILE_APP_TITTLE}</h2>
-                        <p>{langTokens.COMMODITIES_BANNER_MOBILE_APP_SUB_TITTLE}</p>
-                    <div className="btn_group row">
-                        <a className="btn btn--download lg-btn">{langTokens.BTN_DOWNLOAD}</a>
+                <div className='mobile'>
+                    <div className='mobile_app'>
+                        <div>
+                            <h2>{langTokens.COMMODITIES_BANNER_MOBILE_APP_TITTLE}</h2>
+                            <p>{langTokens.COMMODITIES_BANNER_MOBILE_APP_SUB_TITTLE}</p>
+                            <div className="btn_group row">
+                                <a className="btn btn--download lg-btn">{langTokens.BTN_DOWNLOAD}</a>
+                            </div>
+                        </div>
                     </div>
-                    </div>
+                    <img src={onePhone} alt='' width="200px" height="400px" />
                 </div>
-                <img src={onePhone} alt='' width="200px" height="400px"/>
-            </div>
                 <ul className='list-unstyled stocks_interest'>
                     <li>
                         {langTokens.COMMODITIES_BANNER_MOBILE_OVER}<br />
                         <small>{langTokens.COMMODITIES_BANNER_MOBILE_SUB_OVER}</small>
                     </li>
                     <li>
-                    {langTokens.COMMODITIES_BANNER_MOBILE_UP}<br />
+                        {langTokens.COMMODITIES_BANNER_MOBILE_UP}<br />
                         <small>{langTokens.COMMODITIES_BANNER_MOBILE_SUB_UP}</small>
                     </li>
                 </ul>

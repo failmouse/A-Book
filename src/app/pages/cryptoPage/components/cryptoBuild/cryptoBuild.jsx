@@ -1,7 +1,7 @@
 import React from "react";
 import './cryptoBuild.scss';
 import { useSelector } from 'react-redux';
-import {tradingLink} from '../../../../constants/variables.js';
+import { tradingLink } from '../../../../constants/variables.js';
 import { getAssets } from "../../../../actions/actions";
 
 import btc_white from './assets/btc_white.svg';
@@ -12,7 +12,7 @@ import btc_lg from './assets/btc.svg';
 
 import langTokens from '../../../../languages/en.json';   // for new implementation 
 
-const Build= () =>{
+const Build = () => {
     getAssets();
     let btc = "BTCUSD";
     let bnb = "BNBUSD";
@@ -21,14 +21,14 @@ const Build= () =>{
     const assets = useSelector((state) => state.assets.data);
     // const langTokens = useSelector((state) => state.language.data);  // for old implementation
 
-    if (!assets) {return null;}
-    const crypto=[
-        {alt:"Bitcoin", logo: btc_lg , title: "BTC", currency: assets.assets[btc].ask , persent:parseFloat(((assets.assets[btc].ask - assets.assets[btc].open)/assets.assets[btc].open)*100).toFixed(2) },
-        {alt:"BNB", logo: bnb_lg , title: "BNB", currency: assets.assets[bnb].ask , persent:parseFloat(((assets.assets[bnb].ask - assets.assets[bnb].open)/assets.assets[bnb].open)*100).toFixed(2) },
-        {alt:"Cardano", logo: ada_lg , title: "ADA", currency: assets.assets[ada].ask , persent:parseFloat(((assets.assets[ada].ask - assets.assets[ada].open)/assets.assets[ada].open)*100).toFixed(2) },
-        {alt:"Ethereum", logo: eth_lg , title: "ETH", currency: assets.assets[eth].ask , persent:parseFloat(((assets.assets[eth].ask - assets.assets[eth].open)/assets.assets[eth].open)*100).toFixed(2) },
+    if (!assets) { return null; }
+    const crypto = [
+        { alt: "Bitcoin", logo: btc_lg, title: "BTC", currency: assets.assets[btc].ask, persent: parseFloat(((assets.assets[btc].ask - assets.assets[btc].open) / assets.assets[btc].open) * 100).toFixed(2) },
+        { alt: "BNB", logo: bnb_lg, title: "BNB", currency: assets.assets[bnb].ask, persent: parseFloat(((assets.assets[bnb].ask - assets.assets[bnb].open) / assets.assets[bnb].open) * 100).toFixed(2) },
+        { alt: "Cardano", logo: ada_lg, title: "ADA", currency: assets.assets[ada].ask, persent: parseFloat(((assets.assets[ada].ask - assets.assets[ada].open) / assets.assets[ada].open) * 100).toFixed(2) },
+        { alt: "Ethereum", logo: eth_lg, title: "ETH", currency: assets.assets[eth].ask, persent: parseFloat(((assets.assets[eth].ask - assets.assets[eth].open) / assets.assets[eth].open) * 100).toFixed(2) },
     ]
-    return(
+    return (
         <section className="build">
             <div className="container">
                 <div className="title d-sm-none d-lg-block indent__title">
@@ -78,7 +78,7 @@ const Build= () =>{
                                             </div>
                                         </div>
                                         <div className="div_right">
-                                            <a className="btn-Crypto btn-Crypto--buy" href="https://trade.stocksfinex.com/en/sign-up">{langTokens.CRYPTO_TOP_PANEL_BTN_BUY}</a>
+                                            <a className="btn-Crypto btn-Crypto--buy" href="https://trade.a-book.com/en/sign-up">{langTokens.CRYPTO_TOP_PANEL_BTN_BUY}</a>
                                         </div>
                                     </li>)}
                                 </ul>
@@ -89,7 +89,7 @@ const Build= () =>{
                     </div>
                     <div className="col-lg-6 mobile">
                         <div className="title indent__title_auxilary indent__mobile">
-                        <h2>{langTokens.CRYPTO_BUILD_PORTFOLIO_TITTLE}</h2>
+                            <h2>{langTokens.CRYPTO_BUILD_PORTFOLIO_TITTLE}</h2>
                         </div>
                         <ul className="list-unstyled check_ul indent__list">
                             <li>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_1} <b>{langTokens.CRYPTO_BUILD_PORTFOLIO_LIST_ITEM_1_HREF}</b></li>
